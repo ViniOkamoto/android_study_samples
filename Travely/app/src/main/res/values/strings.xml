@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Travely</string>
+    <string name="hint_gas_cost_box">Type the gas cost per liter</string>
+    <string name="hint_distance_box">Type the travel distance</string>
+    <string name="hint_kilometers_per_liter">Type the vehicle range km per liter</string>
+    <string name="total_kilometers">Total kilometers</string>
+    <string name="cost_per_liter">Total cost per liter</string>
+    <string name="total_spend">Your total spend will be:</string>
+    <string name="total_cost">$ 0</string>
+    <string name="vehicle_autonomy">Kms per liter</string>
+    <string name="calculate">Calculate</string>
+
+</resources>

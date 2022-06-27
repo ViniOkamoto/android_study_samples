@@ -11,6 +11,7 @@
         android:id="@+id/edit_travel_distance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_marginTop="16dp"
         android:hint="@string/hint_distance_box"
         />
@@ -26,6 +27,7 @@
         android:id="@+id/edit_gas_cost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:hint="@string/hint_gas_cost_box" />
     <TextView
         android:layout_width="match_parent"
@@ -39,6 +41,7 @@
         android:id="@+id/edit_vehicle_autonomy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:hint="@string/hint_kilometers_per_liter" />
     <TextView
         android:layout_width="match_parent"

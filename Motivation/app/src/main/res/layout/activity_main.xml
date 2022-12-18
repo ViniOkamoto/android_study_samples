@@ -20,10 +20,10 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:tint="@color/white"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_all_inclusive" />
+            android:src="@drawable/ic_all_inclusive"
+            app:tint="@color/white" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -39,14 +39,16 @@
 
 
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/linearMenu"
-            android:textColor="@color/black"
         android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Hello World!"
         />
 
     <TextView
@@ -74,6 +76,7 @@
         />
 
     <Button
+        android:id="@+id/newPhraseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

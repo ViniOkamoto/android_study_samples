@@ -10,4 +10,5 @@
     <string name="vehicle_autonomy">Kms per liter</string>
     <string name="calculate">Calculate</string>
 
+    <string name="validate_error_all_fields">The fields are not valid, </string>
 </resources>

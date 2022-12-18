@@ -1,8 +1,11 @@
-package com.example.motivation
+package com.example.motivation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.motivation.core.services.LocalStorage
+import com.example.motivation.R
+import com.example.motivation.core.utils.StorageConstants
 import com.example.motivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -15,7 +18,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-
+        var name =  LocalStorage(this).getString(StorageConstants.KEY.USER_NAME)
+        binding.textGreetings.text = "Hello, $name"
         binding.newPhraseButton.setOnClickListener(this)
 
     }

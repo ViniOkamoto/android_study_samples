@@ -10,4 +10,10 @@ class AppConstants {
         const val SUNNY = 2
         const val HAPPY = 3
     }
+
+    object LANGUAGE {
+        const val ENGLISH = "en"
+        const val PORTUGUESE = "pt"
+    }
+
 }

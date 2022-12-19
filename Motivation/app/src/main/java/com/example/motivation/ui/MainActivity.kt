@@ -11,6 +11,7 @@ import com.example.motivation.core.utils.AppConstants
 import com.example.motivation.databinding.ActivityMainBinding
 import com.example.motivation.`interface`.*
 import com.example.motivation.data.Mock
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -25,19 +26,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
-        val name =  LocalStorage(this).getString(AppConstants.KEYS.USER_NAME)
-        val greeting = "Olá, $name"
-        binding.textGreetings.text = greeting
+
+        showUserName()
 
         initializeFilters()
 
         handleFilter(allFilter)
 
+        initializeListeners()
+
+    }
+    private fun initializeListeners(){
+
         binding.newPhraseButton.setOnClickListener(this)
         binding.sunnyButton.setOnClickListener(this)
         binding.allButton.setOnClickListener(this)
         binding.happyButton.setOnClickListener(this)
+    }
 
+    private fun showUserName(){
+        val name =  LocalStorage(this).getString(AppConstants.KEYS.USER_NAME)
+        val greeting = "${getString(R.string.hello)} $name"
+        binding.textGreetings.text = greeting
     }
 
     private fun initializeFilters() {
@@ -64,7 +74,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleNewPhrase() {
-        Mock().getPhrase(currentFilter.categoryId).let {
+        val language = Locale.getDefault().language
+        Mock().getPhrase(currentFilter.categoryId,language ).let {
             binding.textView.text = it
         }
     }

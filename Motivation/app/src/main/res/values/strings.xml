@@ -11,4 +11,7 @@
     <string name="phrases_morning">Frases para manhã</string>
 
     <string name="validation_mandatory_name">Informe seu nome.</string>
+    <string name="all_filter_button">All filter button</string>
+    <string name="happy_filter_button">Happy filter button</string>
+    <string name="sunny_filter_button">Sunny filter button</string>
 </resources>

@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.example.motivation.core.services.LocalStorage
 import com.example.motivation.R
-import com.example.motivation.core.utils.StorageConstants
+import com.example.motivation.core.utils.AppConstants
 import com.example.motivation.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,7 +25,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyIfUserExists() {
-        val name = LocalStorage(this).getString(StorageConstants.KEY.USER_NAME)
+        val name = LocalStorage(this).getString(AppConstants.KEYS.USER_NAME)
         if(name != "") {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -39,10 +39,10 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleSave() {
-        val name: String = binding.editName.text.toString();
+        val name: String = binding.editName.text.toString()
         if (name != "") {
-            var storage = LocalStorage(this);
-            storage.storeString(StorageConstants.KEY.USER_NAME, name);
+            val storage = LocalStorage(this)
+            storage.storeString(AppConstants.KEYS.USER_NAME, name)
 
             startActivity(
                 Intent(this, MainActivity::class.java)
